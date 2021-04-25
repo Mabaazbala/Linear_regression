@@ -17,7 +17,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 #Import dataset and extract dependent and independent variables
-salary_data = pd.read_csv(r"E:\Data_Collection\CSV\Salary_Data.csv")
+salary_data = pd.read_csv("Salary_Data.csv")
 
 # Salary Find what will be the salary the person
 x = salary_data.iloc[:, :-1].values
@@ -68,7 +68,7 @@ sns.barplot(x='YearsExperience',y='Salary',data = salary_data)
 sns.heatmap(salary_data.corr())
 
 
-# ### Spliting the dataset into the Training and Test Set
+# ### Splitting the dataset into the Training and Test Set
 
 # In[30]:
 
@@ -77,7 +77,7 @@ from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 1/3, random_state = 0)
 
 
-# ### Fitting Simple linear regression to the trining set
+# ### Fitting Simple linear regression to the training set
 
 # In[32]:
 
